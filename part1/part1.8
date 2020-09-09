@@ -1,1 +1,4 @@
-docker run -v $(pwd)/logs.txt:/usr/app/logx.txt devopsdockeruh/first_volume_exercise
+touch logs.txt
+chmod a+rx logs.txt
+
+docker run -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
