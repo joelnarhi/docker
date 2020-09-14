@@ -1,0 +1,5 @@
+docker build . -t frontend --no-cache
+docker run -d -p 5000:5000 frontend
+
+docker build . -t backend --no-cache
+docker run -d -p 8888:8000 backend
