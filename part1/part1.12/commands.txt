@@ -1,3 +1,5 @@
+git clone https://github.com/docker-hy/frontend-example-docker.git
+
 docker build . -t frontend --no-cache
 docker run -d -p 5000:5000 frontend
 
