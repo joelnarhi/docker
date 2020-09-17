@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+   front:
+      build: ./frontend
+      environment:
+        -API_URL: 192.168.0.115:8888
+      ports:
+        - 5000:5000
+      container_name: frontend
+   back:
+      build: ./backend
+      environment:
+        -API_URL: 192.168.0.115:5000
+      ports:
+        - 8888:8000
+      volumes:
+        - ./logs.txt:/usr/app/logs.txt
+      container_name: backend
